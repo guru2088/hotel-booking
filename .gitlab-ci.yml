@@ -1,0 +1,26 @@
+variables:
+  VER: "{CI_PIPELINE_ID}"
+  DOCKER_REG: "{DOCKER_REG}"
+  PRO_NAME: "{PRO_NAME}"
+
+stages:
+  - build
+  - tagging
+
+docker_build:
+  only:
+    - master
+  except:
+    - tags
+  stage: build
+  tags:
+    - docker-build
+  script:
+    - echo "Starting build process... ${PRO_NAME}:${VER}"
+    - echo "Working directory is ${CI_PROJECT_DIR}"
+    - docker build -t ${PRO_NAME}:${VER} .
+    - docker tag ${PRO_NAME}:${VER} ${DOCKER_REG}/${PRO_NAME}:${VER}
+    - docker tag ${PRO_NAME}:${VER} ${DOCKER_REG}/${PRO_NAME}:latest
+    - docker push ${DOCKER_REG}/${PRO_NAME}:${VER}
+    - docker push ${DOCKER_REG}/${PRO_NAME}:latest
+    - echo "Congratulation, we are here finanlly. ${VER}"

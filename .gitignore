@@ -16,6 +16,9 @@
 
 /output
 
+.coverage
+
+__.pytest_cache__*
 
 # misc
 .DS_Store

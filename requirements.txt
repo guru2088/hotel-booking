@@ -3,3 +3,4 @@ pytest-cov
 Flask
 requests
 python-dotenv
+mock
