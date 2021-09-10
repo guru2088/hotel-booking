@@ -65,7 +65,8 @@ roomStatus  = [
 ]
 
 
-# Above Master JSONs can also be stored in any database or constant files , For ease of view i have placed here
+# Above Master JSONs roomInfo and roomStatus can also be stored in any databases or External Data soruces,
+# For ease of view i have placed here
 
 roomUpdates = []
 

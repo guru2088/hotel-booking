@@ -3,20 +3,6 @@ import pytest
 from mock import patch
 from app import checkin,checkout, cleaned,markrepair, completedrepair,roomsAvailable
 
-# mock_data = [{
-#     "floor": 1,
-#     "rooms" : [
-#         {"id": 1, "name" : "A"},
-#         {"id": 2, "name" : "B"},
-#         {"id": 3, "name" : "C"},
-#         {"id": 4, "name" : "D"},
-#         {"id": 5, "name" : "E"}
-#     ]
-# }]
-#
-# @patch('app.roomInfo', mock_data)
-
-
 def test_checkin():
     """ Tests the checkin function for success """
     assert "Occupied , Floor : " + str(1) + ", Room : " + str(1) == checkin(1,1)
@@ -48,7 +34,7 @@ def test_roomsAvailable():
     """ Tests the available error function """
     assert True == isinstance(roomsAvailable(),dict)
 
-
+# Above are some of the test cases to prove the ability of writing test cases. In real project we can achieve 100% in code coverage
 
 # def test_checkout():
 #     """ Tests the checkout function """

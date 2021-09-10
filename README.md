@@ -18,12 +18,12 @@ This sample code involves using a simple Flask API to serve
 
 The API can then be run by using:
 ```
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
 or
 
 ```
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 
