@@ -3,10 +3,25 @@
 This sample code involves using a simple Flask API to serve
 
 • A method for requesting for room assignment, which reply with the assigned room number upon success.
+
+http://localhost:5000/main/api/checkin/1/1
+
 • A method to check out of a room.
+
+http://localhost:5000/main/api/checkout/1/1
+
 • A method to mark a room cleaned (Available).
+
+http://localhost:5000/main/api/cleaned/1/1
+
 • A method to mark a room for repair.
+
+http://localhost:5000/main/api/mark-repair/1/1
+http://localhost:5000/main/api/completed-repair/1/1
+
 • A method to list all the available rooms.
+
+http://localhost:5000/main/api/available
 
 ## Required Dependencies
 
@@ -18,12 +33,12 @@ This sample code involves using a simple Flask API to serve
 
 The API can then be run by using:
 ```
-pip install -r requirements.txt
+pip install -r main/requirements.txt
 ```
 or
 
 ```
-pip3 install -r requirements.txt
+pip3 install -r main/requirements.txt
 ```
 
 
@@ -31,12 +46,12 @@ pip3 install -r requirements.txt
 
 The API can then be run by using:
 ```
-python app.py
+python run.py
 ```
 or
 
 ```
-python3 app.py
+python3 run.py
 ```
 
 
